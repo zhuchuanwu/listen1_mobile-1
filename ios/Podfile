@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'Listen1' do
+target 'AwesomeProject' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
@@ -16,9 +16,7 @@ target 'Listen1' do
 
   pod 'react-native-video', :path => '../node_modules/react-native-video'
 
-  pod 'react-native-cookies', :path => '../node_modules/react-native-cookies'
-
-  target 'Listen1Tests' do
+  target 'AwesomeProjectTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -33,11 +31,3 @@ target 'Listen1' do
   end
 end
 
-target 'Listen1-tvOS' do
-  # Pods for Listen1-tvOS
-
-  target 'Listen1-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end
